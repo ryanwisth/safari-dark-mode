@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode",
+  "description": "Dark mode for every website, in six color themes: Dark, Black, Dim, Sepia, Nord and Dracula.",
+  "version": "1.0.0",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png",
+    "512": "icons/icon-512.png"
+  },
+  "background": {
+    "scripts": ["themes.js", "shared.js", "background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["themes.js", "shared.js", "content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Dark Mode",
+    "default_icon": {
+      "16": "icons/toolbar-on-16.png",
+      "32": "icons/toolbar-on-32.png"
+    }
+  },
+  "commands": {
+    "toggle-dark-mode": {
+      "suggested_key": { "default": "Alt+Shift+D", "mac": "Alt+Shift+D" },
+      "description": "Turn dark mode on or off"
+    }
+  },
+  "permissions": ["storage"]
+}

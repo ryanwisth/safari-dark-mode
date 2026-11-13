@@ -1,0 +1,3 @@
+# Only needed for the developer tools in tools/, not for the extension itself.
+numpy        # tools/fit_themes.py
+Pillow       # tools/make_icons.py

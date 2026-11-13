@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dark Mode</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="../themes.js"></script>
+  <script src="../shared.js"></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="../icons/icon-48.png" alt="" width="22" height="22">
+      <span>Dark Mode</span>
+    </div>
+    <label class="switch" title="Turn dark mode on or off (⌥⇧D)">
+      <input type="checkbox" id="enabled" aria-label="Dark mode on">
+      <span class="knob"></span>
+    </label>
+  </header>
+
+  <main id="main">
+    <section>
+      <h2>Theme</h2>
+      <div class="themes" id="themes" role="radiogroup" aria-label="Theme"></div>
+    </section>
+
+    <section class="sliders">
+      <label class="slider">
+        <span>Brightness</span>
+        <input type="range" id="brightness" min="50" max="150" step="1">
+        <output id="brightnessOut">100%</output>
+      </label>
+      <label class="slider">
+        <span>Contrast</span>
+        <input type="range" id="contrast" min="50" max="150" step="1">
+        <output id="contrastOut">100%</output>
+      </label>
+    </section>
+
+    <section class="site">
+      <div class="site-head">
+        <h2 id="host">This site</h2>
+        <span class="status" id="status"></span>
+      </div>
+      <div class="seg" id="siteMode" role="radiogroup" aria-label="Dark mode on this site">
+        <button type="button" data-mode="auto" role="radio">Auto</button>
+        <button type="button" data-mode="on" role="radio">Always</button>
+        <button type="button" data-mode="off" role="radio">Never</button>
+      </div>
+    </section>
+
+    <label class="check">
+      <input type="checkbox" id="followSystem">
+      <span>Only when macOS is in Dark Mode</span>
+    </label>
+  </main>
+
+  <footer><kbd>⌥⇧D</kbd> turns dark mode on and off</footer>
+</body>
+</html>

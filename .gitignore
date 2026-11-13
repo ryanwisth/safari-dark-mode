@@ -1,0 +1,18 @@
+# Build products (app bundle, icns, snap binary, screenshots)
+build/
+*.app
+*.appex
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Secrets, local data, logs
+.env
+.env.*
+*.db
+*.log
+
+# macOS
+.DS_Store
