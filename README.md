@@ -2,6 +2,8 @@
 
 A Safari web extension for macOS that turns light websites dark, in six color themes, and leaves sites that are already dark alone.
 
+**Plain-words write-up:** [Dark mode for any website in Safari](https://ryanwisth.github.io/safari-dark-mode.html)
+
 ## Why it exists
 
 Many sites still have no dark theme. Instead of rewriting each page's CSS, this extension takes a smaller approach: one GPU-accelerated CSS filter on the page root, with themes whose filter values were fitted numerically so each one lands on a chosen background and text color. It was also an exercise in shipping a Safari extension end to end on a Mac without Xcode.
